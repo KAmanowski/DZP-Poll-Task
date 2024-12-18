@@ -1,3 +1,3 @@
-# Front-End
+# Technical Task
 
-1. `npm install`
+You can find the relevant READMEs in each section :)
