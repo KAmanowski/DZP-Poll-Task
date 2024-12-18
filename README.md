@@ -1,1 +1,3 @@
-# DZP-Task
+# Front-End
+
+1. `npm install`

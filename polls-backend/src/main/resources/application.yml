@@ -1,0 +1,17 @@
+spring.application.name: polls-backend
+
+spring.datasource.url: jdbc:sqlserver://localhost:1433;trustServerCertificate=true;databaseName=master
+spring.datasource.username: SA
+spring.datasource.password: yourStrong(!)Password
+
+spring:
+  liquibase:
+    url: jdbc:sqlserver://localhost:1433;trustServerCertificate=true;databaseName=master
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    user: SA
+    password: yourStrong(!)Password
+    change-log: classpath:/db/changelog/changelog-master.xml
+
+
+poll.max.options: 7
+poll.min.options: 2

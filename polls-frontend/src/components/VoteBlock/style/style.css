@@ -1,0 +1,78 @@
+.content {
+  display: flex;
+  margin: 0 auto;
+  align-content: center;
+}
+
+.result-text {
+  width: 20%
+}
+
+.vote-block {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+  padding: 1em 10px;
+  background-color: #201d27;
+  border: 5px solid #0c0d0f;
+  border-radius: 5px;
+  cursor: pointer;
+
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  animation: Animation 5s ease infinite;
+}
+
+.vote-block:hover {
+  background-color: #2C2836;
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.vote-block.selected {
+  background-color: #3D3300;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.vote-block.result {
+  cursor: auto;
+}
+
+.vote-block.result:hover {
+  cursor: auto;
+  background-color: #201d27;
+}
+
+.vote-block.selected.result:hover {
+  cursor: auto;
+  background-color: #3D3300;
+}
+
+.vote-block.selected:hover {
+  background-color: #574800;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="amanowskik">
+        <comment>Add Vote table to capture user votes.</comment>
+
+        <createTable tableName="Vote">
+            <column name="Vote_Id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="Option_Id" type="int"/>
+            <column name="Voted_At" type="timestamp" defaultValueDate="SYSUTCDATETIME()"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="Vote" baseColumnNames="Option_Id"
+                                 constraintName="FK_Vote_Vote_Id_Option_Id"
+                                 referencedTableName="Poll_Option" referencedColumnNames="Option_Id"/>
+
+        <rollback>
+            <dropTable tableName="Vote"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

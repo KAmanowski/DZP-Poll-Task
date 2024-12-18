@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="amanowskik">
+        <createTable tableName="Poll">
+            <column name="Poll_Id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="Question" type="nvarchar(100)"/>
+            <column name="Created_At" type="timestamp" defaultValueDate="SYSUTCDATETIME()"/>
+            <column name="Updated_At" type="timestamp" defaultValueDate="SYSUTCDATETIME()"/>
+            <column name="Active" type="bit"/>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="Poll"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

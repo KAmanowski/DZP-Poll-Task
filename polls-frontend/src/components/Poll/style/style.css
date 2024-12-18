@@ -1,0 +1,20 @@
+.question {
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #0c0d0f;
+  border-radius: 5px;
+}
+
+.vote-blocks {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.total-count {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px;
+}
