@@ -47,8 +47,8 @@ public class SqlPollRepository implements IPollRepository {
       + "po.Deleted";
 
   private static final String CREATE_POLL = ""
-      + "INSERT INTO dbo.Poll (Question, Created_At, Updated_At, Active) "
-      + "VALUES (:question, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 0)";
+      + "INSERT INTO dbo.Poll (Question, Active) "
+      + "VALUES (:question, 0)";
 
   private static final String SET_ACTIVE = ""
       + "UPDATE dbo.Poll SET Active = 1, Updated_At = CURRENT_TIMESTAMP WHERE Poll_Id = :pollId";

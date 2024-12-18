@@ -51,3 +51,9 @@ So you can, currently (via API):
 - Basic error catching.
 
 It could, of course, be improved with pagination, possibly some caching, more edit functionality, more information saved in the DB - basically, given more time I definitely have ideas on how it can be jazzed up more.
+
+## Testing
+
+I added two integration tests on how I would test the DB methods directly.
+
+Other services/controllers/resultSetExtractors can be tested either directly via integration tests with an actual DB, or via mockito mocks.
